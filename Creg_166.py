@@ -15,5 +15,5 @@ IPC0 = 104.97
 G0 = Gi0 + Gaom0
 st.code(G0)
 
-df = pd.read_excel("IPP.xlsx")
+df = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
 st.write(df)
