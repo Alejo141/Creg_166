@@ -10,4 +10,4 @@ IPP0 = 122.59
 IPC0 = 104.97
 
 G0 = Gi0 + Gaom0
-print(G0)
+st.code(G0)
