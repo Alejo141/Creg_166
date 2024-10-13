@@ -38,3 +38,9 @@ IPCm_1 = ipc["Índice"][202307]
 
 st.caption("IPCm_1:")
 st.code(IPCm_1)
+
+Cm = C0 * (IPCm_1/IPC0)
+st.code(Cm)
+
+CU = Gm + Cm
+st.code(CU)
