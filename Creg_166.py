@@ -8,6 +8,11 @@ pip.main(["install", "openpyxl"])
 st.title("Cálculos CREG 166")
 
 ######### Constantes ###########
+
+st.subheader("Indique si es o no con inversión pública")
+st.radio('Modulo, Estructura, OE y OC', ['Si'], ['No'])
+
+
 Gi0 = 0
 Gaom0 = 86525
 C0 = 23181
