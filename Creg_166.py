@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import pip
 
+import pip
 pip.main(["install", "openpyxl"])
 
 st.title("Cálculos CREG 166")
