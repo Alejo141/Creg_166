@@ -18,7 +18,7 @@ st.code(G0)
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
 st.write(ipp)
 
-st.code(ipp["May-23 (pr)*"])
+#st.code(ipp["May-23 (pr)*"])
 
 IPPm_1 = ipp["May-23 (pr)*"][0]
 
@@ -26,10 +26,11 @@ st.caption("IPPm_1:")
 st.code(IPPm_1)
 
 Gm = G0 * (IPPm_1/IPP0)
+st.caption("Gm:")
 st.code(Gm)
 
 df = pd.read_excel("IPC.xlsx")
-st.write(df)
+#st.write(df)
 
 ipc = df.set_index("Año(aaaa)-Mes(mm)")
 st.write(ipc)
@@ -40,7 +41,9 @@ st.caption("IPCm_1:")
 st.code(IPCm_1)
 
 Cm = C0 * (IPCm_1/IPC0)
+st.caption("Cm:")
 st.code(Cm)
 
 CU = Gm + Cm
+st.subheader("IPCm_1:")
 st.code(CU)
