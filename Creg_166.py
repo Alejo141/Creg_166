@@ -41,16 +41,33 @@ with col4:
     else:
         Bat = 104539
 
+#Crear dos columnas con el mismo tamaño
+col1, col2, col3, col4, col5 = st.columns(5)
 
+with col1:
+    Gi0 = Mod + Con + Inv + Bat
+    st.caption("Gi0:")
+    st.code(Gi0)
 
-Gi0 = Mod + Con + Inv + Bat
-st.caption("Gi0:")
-st.code(Gi0)
+with col2:
+    Gaom0 = 86525
+    st.caption("Gaom0:")
+    st.code(Gaom0)
 
-Gaom0 = 86525
-C0 = 23181
-IPP0 = 122.59
-IPC0 = 104.97
+with col3:
+    C0 = 23181
+    st.caption("C0:")
+    st.code(C0)
+
+with col4:
+    IPP0 = 122.59
+    st.caption("IPP0:")
+    st.code(IPP0)
+
+with col5:
+    IPC0 = 104.97
+    st.caption("IPC0:")
+    st.code(IPC0)
 
 ######### Cálculo G0 ###########
 G0 = Gi0 + Gaom0
