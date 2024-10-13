@@ -17,3 +17,9 @@ st.code(G0)
 
 df = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
 st.write(df)
+
+df["May-23 (pr)*"]
+
+IPPm_1 = df["May-23 (pr)*"][0]
+
+st.code(IPPm_1)s
