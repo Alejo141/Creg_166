@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import pip
+
+pip.main(["install", "openpyxl"])
 
 st.title("Cálculos CREG 166")
 
@@ -13,3 +16,4 @@ G0 = Gi0 + Gaom0
 st.code(G0)
 
 df = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
+st.write(df)
