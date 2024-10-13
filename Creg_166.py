@@ -44,6 +44,7 @@ with col4:
 
 
 Gi0 = Mod + Con + Inv + Bat
+st.caption("Gi0:")
 st.code(Gi0)
 
 Gaom0 = 86525
