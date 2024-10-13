@@ -15,11 +15,20 @@ IPC0 = 104.97
 G0 = Gi0 + Gaom0
 st.code(G0)
 
-df = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
+ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
+st.write(ipp)
+
+st.code(ipp["May-23 (pr)*"])
+
+IPPm_1 = ipp["May-23 (pr)*"][0]
+
+st.code("IPPm-1: "IPPm_1)
+
+Gm = G0 * (IPPm_1/IPP0)
+st.code(Gm)
+
+df = pd.read_excel("IPC.xlsx")
 st.write(df)
 
-st.code(df["May-23 (pr)*"])
-
-IPPm_1 = df["May-23 (pr)*"][0]
-
-st.code(IPPm_1)
+ipc = df.set_index("Año(aaaa)-Mes(mm)")
+st.write(ipc)
