@@ -33,3 +33,8 @@ st.write(df)
 
 ipc = df.set_index("Año(aaaa)-Mes(mm)")
 st.write(ipc)
+
+IPCm_1 = ipc["Índice"][202307]
+
+st.caption("IPCm_1:")
+st.code(IPCm_1)
