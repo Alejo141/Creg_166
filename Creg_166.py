@@ -22,7 +22,7 @@ st.code(ipp["May-23 (pr)*"])
 
 IPPm_1 = ipp["May-23 (pr)*"][0]
 
-st.code("IPPm-1: "IPPm_1)
+st.code("IPPm-1: ", IPPm_1)
 
 Gm = G0 * (IPPm_1/IPP0)
 st.code(Gm)
