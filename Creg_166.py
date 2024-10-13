@@ -15,19 +15,37 @@ st.subheader("Inversión Pública?")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:   
-    st.radio('Modulo, Estructura, OE y OC', ['Si', 'No'])
+    Modulo = st.radio('Modulo, Estructura, OE y OC', ['Si', 'No'])
+    if Modulo = 'Si':
+        Mod = 0
+    else:
+        Mod = 83151
     
 with col2:
-    st.radio('Controlador', ['Si', 'No'])
+    Controlador = st.radio('Controlador', ['Si', 'No'])
+    if Controlador = 'Si':
+        Con = 0
+    else:
+        Con = 15986
 
 with col3:
-    st.radio('Inversor', ['Si', 'No'])
-    
+    Inversor = st.radio('Inversor', ['Si', 'No'])
+    if Inversor = 'Si':
+        Inv = 0
+    else:
+        Inv = 25617
 with col4:
-    st.radio('Batería', ['Si', 'No'])
+    Bateria = st.radio('Batería', ['Si', 'No'])
+    if Bateria = 'Si':
+        Bat = 0
+    else:
+        Bat = 104539
 
 
-Gi0 = 0
+
+Gi0 = Mod + Con + Inv + Bat
+st.code(Gi0)
+
 Gaom0 = 86525
 C0 = 23181
 IPP0 = 122.59
