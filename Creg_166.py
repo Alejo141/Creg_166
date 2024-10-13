@@ -16,27 +16,27 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:   
     Modulo = st.radio('Modulo, Estructura, OE y OC', ['Si', 'No'])
-    if Modulo = 'Si':
+    if Modulo == 'Si':
         Mod = 0
     else:
         Mod = 83151
     
 with col2:
     Controlador = st.radio('Controlador', ['Si', 'No'])
-    if Controlador = 'Si':
+    if Controlador == 'Si':
         Con = 0
     else:
         Con = 15986
 
 with col3:
     Inversor = st.radio('Inversor', ['Si', 'No'])
-    if Inversor = 'Si':
+    if Inversor == 'Si':
         Inv = 0
     else:
         Inv = 25617
 with col4:
     Bateria = st.radio('Batería', ['Si', 'No'])
-    if Bateria = 'Si':
+    if Bateria == 'Si':
         Bat = 0
     else:
         Bat = 104539
