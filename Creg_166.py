@@ -9,31 +9,22 @@ st.title("Cálculos CREG 166")
 
 ######### Constantes ###########
 
+st.subheader("Inversión Pública?")
+
 #Crear dos columnas con el mismo tamaño
 col1, col2, col3, col4 = st.columns(4)
 
-# Contenido en la primera columna
-with col1:
-    st.subheader("Indique si es o no con inversión pública")
+with col1:   
     st.radio('Modulo, Estructura, OE y OC', ['Si', 'No'])
     
-# Contenido en la segunda columna
 with col2:
-    st.header("Columna 2")
-    st.write("Este es el contenido de la columna 2.")
+    st.radio('Controlador', ['Si', 'No'])
 
-# Contenido en la tercera columna
 with col3:
-    st.header("Columna 1")
-    st.write("Este es el contenido de la columna 1.")
+    st.radio('Inversor', ['Si', 'No'])
     
-# Contenido en la cuarta columna
 with col4:
-    st.header("Columna 2")
-    st.write("Este es el contenido de la columna 2.")
-
-st.subheader("Indique si es o no con inversión pública")
-st.radio('Modulo, Estructura, OE y OC', ['Si', 'No'])
+    st.radio('Batería', ['Si', 'No'])
 
 
 Gi0 = 0
