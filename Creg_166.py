@@ -74,6 +74,13 @@ G0 = Gi0 + Gaom0
 st.caption("G0:")
 st.code(G0)
 
+
+######################## Selección del mes al cual se le realizará el cálculo #############################
+st.subheader("Selección del periodo al cual se le realizará el cálculo")
+st.selectbox('Seleccione el año', [2020, 2021, 2022, 2023])
+st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
+
+
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
 st.write(ipp)
