@@ -94,7 +94,7 @@ st.caption(año_mes)
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
 # Cambiar solo el nombre de algunas columnas
-ipp = ipp.rename(columns={'Dic-20': 'Diciembre 2020','ene-21 (pr)*': 'Enero 2021', 'feb-21 (pr)*': 'Febrero 2021', 'mar-21 (pr)*': 'Marzo 2021', 'abr-21 (pr)*': 'Abril 2021', 'may-21 (pr)*': 'Mayo 2021', 'jun-21 (pr)*': 'Junio 2021', 'jul-21 (pr)*': 'Julio 2021', 'ago-21 (pr)*': 'Agosto 2021', 'sep-21 (pr)*': 'Septiembre 2021', 'oct-21 (pr)*': 'Octubre 2021', 'nov-21 (pr)*': 'Noviembre 2021', 'dic-21 (pr)*': 'Diciembre 2021'})
+ipp = ipp.rename(columns={'Dic-20': 'Diciembre 2020','ene-21 (pr)*': 'Enero 2021', 'feb-21 (pr)*': 'Febrero 2021', 'mar-21 (pr)*': 'Marzo 2021', 'abr-21 (pr)*': 'Abril 2021', 'May-21 (pr)*': 'Mayo 2021', 'Jun-21 (pr)*': 'Junio 2021', 'Jul-21 (pr)*': 'Julio 2021', 'Ago-21 (pr)*': 'Agosto 2021', 'Sep-21 (pr)*': 'Septiembre 2021', 'Oct-21 (pr)*': 'Octubre 2021', 'Nov-21 (pr)*': 'Noviembre 2021', 'Dic-21 (pr)*': 'Diciembre 2021','Ene-22 (pr)*': 'Enero 2022', 'Feb-22 (pr)*': 'Febrero 2022', 'Mar-22 (pr)*': 'Marzo 2022', 'Abr-22 (pr)*': 'Abril 2022', 'May-22 (pr)*': 'Mayo 2022', 'Jun-22 (pr)*': 'Junio 2022', 'Jul-22 (pr)*': 'Julio 2022', 'Ago-22 (pr)*': 'Agosto 2022', 'Sep-22 (pr)*': 'Septiembre 2022', 'Oct-22 (pr)*': 'Octubre 2022', 'Nov-22 (pr)*': 'Noviembre 2022', 'Dic-22 (pr)*': 'Diciembre 2022'})
 st.write(ipp)
 
 #st.code(ipp["May-23 (pr)*"])
