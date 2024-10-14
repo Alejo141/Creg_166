@@ -77,8 +77,17 @@ st.code(G0)
 
 ######################## Selección del mes al cual se le realizará el cálculo #############################
 st.subheader("Selección del periodo al cual se le realizará el cálculo")
-st.selectbox('Seleccione el año', [2020, 2021, 2022, 2023])
-st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
+
+#Crear dos columnas con el mismo tamaño
+col1, col2, col3, col4, col5 = st.columns(5)
+
+with col1:
+    st.selectbox('Seleccione el año', [2020, 2021, 2022, 2023])
+
+with col2:
+    st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
+
+
 
 
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
