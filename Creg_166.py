@@ -87,11 +87,10 @@ with col1:
 with col2:
     st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
 
-
-
-
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
+# Cambiar solo el nombre de algunas columnas
+ipp = ipp.rename(columns={'ene-21 (pr)*': 'Enero 2021', 'feb-21 (pr)*': 'Febrero 2021'})
 st.write(ipp)
 
 #st.code(ipp["May-23 (pr)*"])
