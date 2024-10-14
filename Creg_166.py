@@ -88,7 +88,7 @@ with col2:
     mes = st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
 
 
-año_mes = f"{mes}{año}"
+año_mes = f"{mes}{" "}{año}"
 st.caption(año_mes)
 
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
