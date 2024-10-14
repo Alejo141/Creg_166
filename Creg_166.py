@@ -94,6 +94,11 @@ año_mes = f"{mes}{" "}{año}"
 st.caption(año_mes)
 
 
+if año_mes == 'Enero 2021':
+    st.subheader("Va a realizar el cálculo Diciembre 2020")
+
+
+
 ############### Se organiza el app ##################
 
 col1, col2 = st.columns(2)
