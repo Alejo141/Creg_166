@@ -114,7 +114,7 @@ df = pd.read_excel("IPC.xlsx")
 #st.write(df)
 
 ipc = df.set_index("Año(aaaa)-Mes(mm)")
-ipc = ipc.loc[ipc["Año(aaaa)-Mes(mm)"] == 'Índice', 202001] = 'Enero 2020'
+ipc = ipc.loc[0] = [202001, 'Enero 2021']
 st.write(ipc)
 
 IPCm_1 = ipc["Índice"][202307] #Se trae el IPC del mes que se quiere calcular
