@@ -101,7 +101,8 @@ ipp = ipp.rename(columns={'Ene-20': 'Enero 2020','Feb-20': 'Febrero 2020','Mar-2
 
 if st.button('Mostrar Tabla'):
     st.write(ipp)
-
+    st.button('Ocultar tabla')
+    
 #Traer el IPP
 IPPm_1 = ipp[año_mes][0]
 st.caption("IPPm_1:")
