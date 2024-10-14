@@ -82,10 +82,13 @@ st.subheader("Selección del periodo al cual se le realizará el cálculo")
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    st.selectbox('Seleccione el año', [2020, 2021, 2022, 2023])
+    año = st.selectbox('Seleccione el año', [2020, 2021, 2022, 2023])
 
 with col2:
-    st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
+    mes = st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
+
+
+año_mes = mes + " " + año
 
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
@@ -95,7 +98,9 @@ st.write(ipp)
 
 #st.code(ipp["May-23 (pr)*"])
 
-IPPm_1 = ipp["May-23 (pr)*"][0] #Se trae el IPP del mes que se quiere calcular
+IPPm_1 = ipp[año_mes][0]
+
+#IPPm_1 = ipp["May-23 (pr)*"][0] #Se trae el IPP del mes que se quiere calcular
 
 st.caption("IPPm_1:")
 st.code(IPPm_1)
