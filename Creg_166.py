@@ -119,8 +119,7 @@ ipc = df.set_index("Año(aaaa)-Mes(mm)")
 ipc_1 = ipc.at[1, "Año(aaaa)-Mes(mm)"] = 'Enero 2020'
 st.write(ipc_1)
 
-IPCm_1 = ipc["Índice"][202307] #Se trae el IPC del mes que se quiere calcular
-
+IPCm_1 = ipc["Índice"][año_mes] #Se trae el IPC del mes que se quiere calcular
 st.caption("IPCm_1:")
 st.code(IPCm_1)
 
