@@ -89,6 +89,7 @@ with col2:
 
 
 año_mes = f"{mes}{año}"
+st.caption(año_mes)
 
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
