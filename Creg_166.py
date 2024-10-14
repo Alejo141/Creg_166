@@ -98,7 +98,9 @@ ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
 
 # Cambiar nombre de las columnas
 ipp = ipp.rename(columns={'Ene-20': 'Enero 2020','Feb-20': 'Febrero 2020','Mar-20': 'Marzo 2020','Abr-20': 'Abril 2020','May-20': 'Mayo 2020','Jun-20': 'Junio 2020','Jul-20': 'Julio 2020','Ago-20': 'Agosto 2020','Sep-20': 'Septiembre 2020','Oct-20': 'Octubre 2020','Nov-20': 'Noviembre 2020','Dic-20': 'Diciembre 2020','ene-21 (pr)*': 'Enero 2021', 'feb-21 (pr)*': 'Febrero 2021', 'mar-21 (pr)*': 'Marzo 2021', 'abr-21 (pr)*': 'Abril 2021', 'May-21 (pr)*': 'Mayo 2021', 'Jun-21 (pr)*': 'Junio 2021', 'Jul-21 (pr)*': 'Julio 2021', 'Ago-21 (pr)*': 'Agosto 2021', 'Sep-21 (pr)*': 'Septiembre 2021', 'Oct-21 (pr)*': 'Octubre 2021', 'Nov-21 (pr)*': 'Noviembre 2021', 'Dic-21 (pr)*': 'Diciembre 2021','Ene-22 (pr)*': 'Enero 2022', 'Feb-22 (pr)*': 'Febrero 2022', 'Mar-22 (pr)*': 'Marzo 2022', 'Abr-22 (pr)*': 'Abril 2022', 'May-22 (pr)*': 'Mayo 2022', 'Jun-22 (pr)*': 'Junio 2022', 'Jul-22 (pr)*': 'Julio 2022', 'Ago-22 (pr)*': 'Agosto 2022', 'Sep-22 (pr)*': 'Septiembre 2022', 'Oct-22 (pr)*': 'Octubre 2022', 'Nov-22 (pr)*': 'Noviembre 2022', 'Dic-22 (pr)*': 'Diciembre 2022','Ene-23 (pr)*': 'Enero 2023', 'Feb-23 (pr)*': 'Febrero 2023', 'Mar-23 (pr)*': 'Marzo 2023', 'Abr-23 (pr)*': 'Abril 2023', 'May-23 (pr)*': 'Mayo 2023', 'Jun-23 (pr)*': 'Junio 2023', 'Jul-23 (pr)*': 'Julio 2023', 'Ago-23 (pr)*': 'Agosto 2023', 'Sep-23 (pr)*': 'Septiembre 2023', 'Oct-23 (pr)*': 'Octubre 2023'})
-st.write(ipp)
+
+
+#st.write(ipp)
 
 #Traer el IPP
 IPPm_1 = ipp[año_mes][0]
