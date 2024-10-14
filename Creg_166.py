@@ -82,7 +82,7 @@ st.subheader("Selección del periodo al cual se le realizará el cálculo")
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    año = st.selectbox('Seleccione el año', [2020, 2021, 2022, 2023])
+    año = st.selectbox('Seleccione el año', ['2020', '2021', '2022', '2023'])
 
 with col2:
     mes = st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
