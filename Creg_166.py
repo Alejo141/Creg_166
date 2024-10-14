@@ -93,16 +93,13 @@ st.caption(año_mes)
 
 ######### Cargar excel IPP (Se deberá actualizar todos los meses ###########
 ipp = pd.read_excel("IPP.xlsx", sheet_name = "2.1")
-# Cambiar solo el nombre de algunas columnas
+
+# Cambiar nombre de las columnas
 ipp = ipp.rename(columns={'Dic-20': 'Diciembre 2020','ene-21 (pr)*': 'Enero 2021', 'feb-21 (pr)*': 'Febrero 2021', 'mar-21 (pr)*': 'Marzo 2021', 'abr-21 (pr)*': 'Abril 2021', 'May-21 (pr)*': 'Mayo 2021', 'Jun-21 (pr)*': 'Junio 2021', 'Jul-21 (pr)*': 'Julio 2021', 'Ago-21 (pr)*': 'Agosto 2021', 'Sep-21 (pr)*': 'Septiembre 2021', 'Oct-21 (pr)*': 'Octubre 2021', 'Nov-21 (pr)*': 'Noviembre 2021', 'Dic-21 (pr)*': 'Diciembre 2021','Ene-22 (pr)*': 'Enero 2022', 'Feb-22 (pr)*': 'Febrero 2022', 'Mar-22 (pr)*': 'Marzo 2022', 'Abr-22 (pr)*': 'Abril 2022', 'May-22 (pr)*': 'Mayo 2022', 'Jun-22 (pr)*': 'Junio 2022', 'Jul-22 (pr)*': 'Julio 2022', 'Ago-22 (pr)*': 'Agosto 2022', 'Sep-22 (pr)*': 'Septiembre 2022', 'Oct-22 (pr)*': 'Octubre 2022', 'Nov-22 (pr)*': 'Noviembre 2022', 'Dic-22 (pr)*': 'Diciembre 2022','Ene-23 (pr)*': 'Enero 2023', 'Feb-23 (pr)*': 'Febrero 2023', 'Mar-23 (pr)*': 'Marzo 2023', 'Abr-23 (pr)*': 'Abril 2023', 'May-23 (pr)*': 'Mayo 2023', 'Jun-23 (pr)*': 'Junio 2023', 'Jul-23 (pr)*': 'Julio 2023', 'Ago-23 (pr)*': 'Agosto 2023', 'Sep-23 (pr)*': 'Septiembre 2023', 'Oct-23 (pr)*': 'Octubre 2023'})
 st.write(ipp)
 
-#st.code(ipp["May-23 (pr)*"])
-
+#Traer el IPP
 IPPm_1 = ipp[año_mes][0]
-
-#IPPm_1 = ipp["May-23 (pr)*"][0] #Se trae el IPP del mes que se quiere calcular
-
 st.caption("IPPm_1:")
 st.code(IPPm_1)
 
@@ -117,6 +114,7 @@ df = pd.read_excel("IPC.xlsx")
 #st.write(df)
 
 ipc = df.set_index("Año(aaaa)-Mes(mm)")
+ipc = ipc.loc[ipc["Año(aaaa)-Mes(mm)"] == 'Índice', 202001] = 'Enero 2020'
 st.write(ipc)
 
 IPCm_1 = ipc["Índice"][202307] #Se trae el IPC del mes que se quiere calcular
