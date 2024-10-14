@@ -119,7 +119,9 @@ df = pd.read_excel("IPC.xlsx")
 #st.write(df)
 
 ipc = df.set_index("Año(aaaa)-Mes(mm)")
-st.write(ipc)
+if st.button('Mostrar Tabla'):
+    st.write(ipc)
+    st.button('Ocultar tabla')
 
 IPCm_1 = ipc["Índice"][año_mes] #Se trae el IPC del mes que se quiere calcular
 st.caption("IPCm_1:")
