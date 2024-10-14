@@ -119,6 +119,7 @@ df = pd.read_excel("IPC.xlsx")
 #st.write(df)
 
 ipc = df.set_index("Año(aaaa)-Mes(mm)")
+
 if st.button('Mostrar Tabla'):
     st.write(ipc)
     st.button('Ocultar tabla')
