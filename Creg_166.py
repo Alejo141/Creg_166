@@ -78,7 +78,7 @@ st.code(G0)
 
 
 ######################## Selección del mes al cual se le realizará el cálculo #############################
-st.subheader("Selección del periodo al cual se le realizará el cálculo")
+st.subheader("Selección el periodo m-1 para realizar el cálculo:")
 
 #Crear dos columnas con el mismo tamaño
 col1, col2, col3, col4, col5 = st.columns(5)
