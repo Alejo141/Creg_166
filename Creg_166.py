@@ -82,7 +82,7 @@ st.code(G0)
 
 
 ######################## Selección del mes al cual se le realizará el cálculo #############################
-st.subheader("Selección el periodo m-1 para realizar el cálculo:")
+st.subheader("Selección el periodo al cual va a realizar el cálculo:")
 
 #Crear dos columnas con el mismo tamaño
 col1, col2, col3, col4, col5 = st.columns(5)
@@ -100,31 +100,43 @@ st.caption(año_mes)
 ######### Días Mes ###########
 if mes == "Enero":
     var_div = 28
+    año_mes_2 = f"{"Diciembre"}{" "}{año}"
 elif mes == "Febrero":
     var_div = 31
+    año_mes_2 = f"{"Enero"}{" "}{año}"
 elif mes == "Marzo":
     var_div = 30
+    año_mes_2 = f"{"Febrero"}{" "}{año}"
 elif mes == "Abril":
     var_div = 31
+    año_mes_2 = f"{"Marzo"}{" "}{año}"
 elif mes == "Mayo":
     var_div = 30
+    año_mes_2 = f"{"Abril"}{" "}{año}"
 elif mes == "Junio":
     var_div = 31
+    año_mes_2 = f"{"Mayo"}{" "}{año}"
 elif mes == "Julio":
     var_div = 31
+    año_mes_2 = f"{"Junio"}{" "}{año}"
 elif mes == "Agosto":
     var_div = 30
+    año_mes_2 = f"{"Julio"}{" "}{año}"
 elif mes == "Septiembre":
     var_div = 31
+    año_mes_2 = f"{"Agosto"}{" "}{año}"
 elif mes == "Octubre":
     var_div = 30
+    año_mes_2 = f"{"Septiembre"}{" "}{año}"
 elif mes == "Noviembre":
     var_div = 31
+    año_mes_2 = f"{"Octubre"}{" "}{año}"
 elif mes == "Diciembre":
     var_div = 31
+    año_mes_2 = f"{"Noviembre"}{" "}{año}"
 
 
-if año_mes == 'Diciembre 2019':
+"""if año_mes == 'Diciembre 2019':
     st.subheader("El cálculo corresponde a Enero 2020")
 elif año_mes == 'Enero 2020':
     st.subheader("El cálculo corresponde a Febrero 2020")
@@ -222,7 +234,7 @@ elif año_mes == 'Noviembre 2023':
     st.subheader("El cálculo corresponde a Diciembre 2023")
 else:
     st.subheader("No se encuentran más meses")
-
+"""
 
 ############### Se organiza el app ##################
 
@@ -240,7 +252,7 @@ with col1:
         st.button('Ocultar tabla IPP')
         
     #Traer el IPP
-    IPPm_1 = ipp[año_mes][0]
+    IPPm_1 = ipp[año_mes_2[0]
     st.caption("IPPm_1:")
     st.code(IPPm_1)
 
@@ -255,7 +267,7 @@ with col2:
         st.write(ipc)
         st.button('Ocultar tabla IPC')
     
-    IPCm_1 = ipc["Índice"][año_mes] #Se trae el IPC del mes que se quiere calcular
+    IPCm_1 = ipc["Índice"][año_mes_2] #Se trae el IPC del mes que se quiere calcular
     st.caption("IPCm_1:")
     st.code(IPCm_1)
 
