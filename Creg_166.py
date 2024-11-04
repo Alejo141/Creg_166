@@ -246,7 +246,10 @@ with col2:
     st.caption("Cm:")
     st.code(Cm)
 
-
+######### Cálculo CU ###########
+CU = (Gm + Cm)
+st.subheader("CU:")
+st.code(CU)
 
 col1, col2, col3 = st.columns(3)
 
@@ -306,7 +309,7 @@ else:
         st.caption("Gaom:")
         st.code(Gaom)
     
-    ######### Cálculo CU ###########
-    CU = (Gm + Cm) * disponibilidad
+    ######### Cálculo CU con disponibilidad ###########
+    CU_disponibilidad = (Gm + Cm) * disponibilidad
     st.subheader("CU:")
-    st.code(CU)
+    st.code(CU_disponibilidad)
