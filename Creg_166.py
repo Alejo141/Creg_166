@@ -246,55 +246,64 @@ with col2:
     st.caption("Cm:")
     st.code(Cm)
 
-col1, col2 = st.columns(2)
 
 
-############ Días del prestados en el periodo ##############
-num_dias_prest = st.number_input("Cuantos días presto en el mes:", min_value=0, max_value=31, value=0)
-st.caption("Días prestados:")
-st.code(num_dias_prest)
-
-if mes == "Enero":
-    var_div = 28
-elif mes == "Febrero":
-    var_div = 31
-elif mes == "Marzo":
-    var_div = 30
-elif mes == "Abril":
-    var_div = 31
-elif mes == "Mayo":
-    var_div = 30
-elif mes == "Junio":
-    var_div = 31
-elif mes == "Julio":
-    var_div = 31
-elif mes == "Agosto":
-    var_div = 30
-elif mes == "Septiembre":
-    var_div = 31
-elif mes == "Octubre":
-    var_div = 30
-elif mes == "Noviembre":
-    var_div = 31
-elif mes == "Diciembre":
-    var_div = 31
-
-st.code(var_div)
+col1, col2, col3 = st.columns(3)
 
 with col1:    
+    ############ Días del prestados en el periodo ##############
+    num_dias_prest = st.number_input("Cuantos días presto en el mes:", min_value=0, max_value=31, value=0)
+    st.caption("Días prestados:")
+    st.code(num_dias_prest)
+
+with col2:
+    ######### Días Mes ###########
+    if mes == "Enero":
+        var_div = 28
+    elif mes == "Febrero":
+        var_div = 31
+    elif mes == "Marzo":
+        var_div = 30
+    elif mes == "Abril":
+        var_div = 31
+    elif mes == "Mayo":
+        var_div = 30
+    elif mes == "Junio":
+        var_div = 31
+    elif mes == "Julio":
+        var_div = 31
+    elif mes == "Agosto":
+        var_div = 30
+    elif mes == "Septiembre":
+        var_div = 31
+    elif mes == "Octubre":
+        var_div = 30
+    elif mes == "Noviembre":
+        var_div = 31
+    elif mes == "Diciembre":
+        var_div = 31
+    
+    st.code(var_div)
+
+with col3:
+    disponibilidad = num_dias_prest/var_div
+    st.caption("Disponibilidad:")
+    st.code(disponibilidad)
+
+col1, col2 = st.columns(2)
+with col1:    
     ######### Cálculo Co ###########
-    Co = G0 * (IPPm_1/IPP0)
-    st.caption("Gm:")
-    st.code(Gm)
+    Co = Cm * disponibilidad
+    st.caption("Co:")
+    st.code(Co)
 
 with col2:
     ######### Cálculo Gaom ###########
-    Cm = C0 * (IPCm_1/IPC0)
-    st.caption("Cm:")
-    st.code(Cm)
-
+    Gaom = Gm * disponibilidad
+    st.caption("Gaom:")
+    st.code(Gaom)
 
 ######### Cálculo CU ###########
-CU = Gm + Cm
+CU = (Gm + Cm) * disponibilidad
 st.subheader("CU:")
 st.code(CU)
