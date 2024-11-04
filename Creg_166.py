@@ -100,7 +100,7 @@ st.caption(año_mes)
 ######### Días Mes ###########
 if mes == "Enero":
     var_div = 31
-    año_mes_2 = f"{"Diciembre"}{" "}{año}"
+    año_mes_2 = f"{"Diciembre"}{" "}{año-1}"
 elif mes == "Febrero":
     var_div = 28
     año_mes_2 = f"{"Enero"}{" "}{año}"
