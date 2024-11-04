@@ -250,7 +250,7 @@ with col2:
 
 col1, col2, col3 = st.columns(3)
 
-with col1, col2:    
+with col1:    
     ############ Días del prestados en el periodo ##############
     num_dias_prest = st.number_input("Cuantos días presto en el mes:", min_value=0, max_value=31, value=0)
     st.caption("Días prestados:")
