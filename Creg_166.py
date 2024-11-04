@@ -252,7 +252,7 @@ with col1:
         st.button('Ocultar tabla IPP')
         
     #Traer el IPP
-    IPPm_1 = ipp[año_mes_2[0]
+    IPPm_1 = ipp[año_mes_2][0]
     st.caption("IPPm_1:")
     st.code(IPPm_1)
 
