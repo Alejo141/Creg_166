@@ -254,7 +254,6 @@ with col1:
     ############ Días del prestados en el periodo ##############
     num_dias_prest = st.number_input("Cuantos días presto en el mes:", min_value=0, max_value=31, value=0)
     st.caption("Días prestados:")
-    st.code(num_dias_prest)
 
 with col2:
     ######### Días Mes ###########
@@ -282,7 +281,7 @@ with col2:
         var_div = 31
     elif mes == "Diciembre":
         var_div = 31
-    
+    st.caption("Días mes:")
     st.code(var_div)
 
 with col3:
