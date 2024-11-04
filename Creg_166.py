@@ -223,7 +223,17 @@ else:
         st.caption("Gaom:")
         st.code(Gaom)
     
-    ######### Cálculo CU con disponibilidad ###########
-    CU_disponibilidad = (Gm + Cm) * disponibilidad
-    st.subheader("CU:")
-    st.code(CU_disponibilidad)
+######### Cálculo CU con disponibilidad ###########
+CU_disponibilidad = (Gm + Cm) * disponibilidad
+st.subheader("CU:")
+st.code(CU_disponibilidad)
+
+######### Cálculo Subsidio ###########
+Subs = CU_disponibilidad * 0.86
+st.subheader("Subsidio:")
+st.code(Subs)
+
+######### Cálculo Tarifa ###########
+Tarifa = CU_disponibilidad - Subs
+st.subheader("Tarifa:")
+st.code(Tarifa)
