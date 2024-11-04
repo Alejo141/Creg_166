@@ -96,6 +96,33 @@ año_mes = f"{mes}{" "}{año}"
 st.caption(año_mes)
 
 
+######### Días Mes ###########
+if mes == "Enero":
+    var_div = 28
+elif mes == "Febrero":
+    var_div = 31
+elif mes == "Marzo":
+    var_div = 30
+elif mes == "Abril":
+    var_div = 31
+elif mes == "Mayo":
+    var_div = 30
+elif mes == "Junio":
+    var_div = 31
+elif mes == "Julio":
+    var_div = 31
+elif mes == "Agosto":
+    var_div = 30
+elif mes == "Septiembre":
+    var_div = 31
+elif mes == "Octubre":
+    var_div = 30
+elif mes == "Noviembre":
+    var_div = 31
+elif mes == "Diciembre":
+    var_div = 31
+
+
 if año_mes == 'Diciembre 2019':
     st.subheader("El cálculo corresponde a Enero 2020")
 elif año_mes == 'Enero 2020':
@@ -260,31 +287,6 @@ with col1:
 col1, col2 = st.columns(2)
 
 with col1:
-    ######### Días Mes ###########
-    if mes == "Enero":
-        var_div = 28
-    elif mes == "Febrero":
-        var_div = 31
-    elif mes == "Marzo":
-        var_div = 30
-    elif mes == "Abril":
-        var_div = 31
-    elif mes == "Mayo":
-        var_div = 30
-    elif mes == "Junio":
-        var_div = 31
-    elif mes == "Julio":
-        var_div = 31
-    elif mes == "Agosto":
-        var_div = 30
-    elif mes == "Septiembre":
-        var_div = 31
-    elif mes == "Octubre":
-        var_div = 30
-    elif mes == "Noviembre":
-        var_div = 31
-    elif mes == "Diciembre":
-        var_div = 31
     st.caption("Días mes:")
     st.code(var_div)
 
