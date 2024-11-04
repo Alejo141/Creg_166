@@ -256,10 +256,28 @@ st.code(num_dias_prest)
 
 if mes == "Enero":
     var_div = 28
-elif mes == "Febrero" or "Abril" or "Junio" or "Julio" or "Septiembre" or "Noviembre" or "Diciembre":
+elif mes == "Febrero":
     var_div = 31
-elif mes == "Marzo" or "Mayo" or "Julio" or "Agosto" or "Octubre":
+elif mes == "Marzo":
     var_div = 30
+elif mes == "Abril":
+    var_div = 31
+elif mes == "Mayo":
+    var_div = 30
+elif mes == "Junio":
+    var_div = 31
+elif mes == "Julio":
+    var_div = 31
+elif mes == "Agosto":
+    var_div = 30
+elif mes == "Septiembre":
+    var_div = 31
+elif mes == "Octubre":
+    var_div = 30
+elif mes == "Noviembre":
+    var_div = 31
+elif mes == "Diciembre":
+    var_div = 31
 
 st.code(var_div)
 
