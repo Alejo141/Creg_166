@@ -7,7 +7,7 @@ import pandas as pd
 import pip
 pip.main(["install", "openpyxl"])
 
-st.legacy_caching.clear_cache()
+st.cache_data.clear()
 
 ######### Título Pag ###########
 st.title("Cálculos CREG 166")
