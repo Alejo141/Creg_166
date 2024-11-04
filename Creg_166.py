@@ -99,142 +99,41 @@ st.caption(año_mes)
 
 ######### Días Mes ###########
 if mes == "Enero":
-    var_div = 28
+    var_div = 31
     año_mes_2 = f"{"Diciembre"}{" "}{año}"
 elif mes == "Febrero":
-    var_div = 31
+    var_div = 28
     año_mes_2 = f"{"Enero"}{" "}{año}"
 elif mes == "Marzo":
-    var_div = 30
+    var_div = 31
     año_mes_2 = f"{"Febrero"}{" "}{año}"
 elif mes == "Abril":
-    var_div = 31
+    var_div = 30
     año_mes_2 = f"{"Marzo"}{" "}{año}"
 elif mes == "Mayo":
-    var_div = 30
+    var_div = 31
     año_mes_2 = f"{"Abril"}{" "}{año}"
 elif mes == "Junio":
-    var_div = 31
+    var_div = 30
     año_mes_2 = f"{"Mayo"}{" "}{año}"
 elif mes == "Julio":
     var_div = 31
     año_mes_2 = f"{"Junio"}{" "}{año}"
 elif mes == "Agosto":
-    var_div = 30
+    var_div = 31
     año_mes_2 = f"{"Julio"}{" "}{año}"
 elif mes == "Septiembre":
-    var_div = 31
+    var_div = 30
     año_mes_2 = f"{"Agosto"}{" "}{año}"
 elif mes == "Octubre":
-    var_div = 30
+    var_div = 31
     año_mes_2 = f"{"Septiembre"}{" "}{año}"
 elif mes == "Noviembre":
-    var_div = 31
+    var_div = 30
     año_mes_2 = f"{"Octubre"}{" "}{año}"
 elif mes == "Diciembre":
     var_div = 31
     año_mes_2 = f"{"Noviembre"}{" "}{año}"
-
-
-"""if año_mes == 'Diciembre 2019':
-    st.subheader("El cálculo corresponde a Enero 2020")
-elif año_mes == 'Enero 2020':
-    st.subheader("El cálculo corresponde a Febrero 2020")
-elif año_mes == 'Febrer 2020':
-    st.subheader("El cálculo corresponde a Marzo 2020")
-elif año_mes == 'Marzo 2020':
-    st.subheader("El cálculo corresponde a Abril 2020")
-elif año_mes == 'Abril 2020':
-    st.subheader("El cálculo corresponde a Mayo 2020")
-elif año_mes == 'Mayo 2020':
-    st.subheader("El cálculo corresponde a Junio 2020")
-elif año_mes == 'Junio 2020':
-    st.subheader("El cálculo corresponde a Julio 2020")
-elif año_mes == 'Julio 2020':
-    st.subheader("El cálculo corresponde a Agosto 2020")
-elif año_mes == 'Agosto 2020':
-    st.subheader("El cálculo corresponde a Septiembre 2020")
-elif año_mes == 'Septiembre 2020':
-    st.subheader("El cálculo corresponde a Octubre 2020")
-elif año_mes == 'Octubre 2020':
-    st.subheader("El cálculo corresponde a Noviembre 2020")
-elif año_mes == 'Noviembre 2020':
-    st.subheader("El cálculo corresponde a Diciembre 2020")
-elif año_mes == 'Diciembre 2020':
-    st.subheader("El cálculo corresponde a Enero 2021")
-elif año_mes == 'Enero 2021':
-    st.subheader("El cálculo corresponde a Febrero 2021")
-elif año_mes == 'Febrero 2021':
-    st.subheader("El cálculo corresponde a Marzo 2021")
-elif año_mes == 'Marzo 2021':
-    st.subheader("El cálculo corresponde a Abril 2021")
-elif año_mes == 'Abril 2021':
-    st.subheader("El cálculo corresponde a Mayo 2021")
-elif año_mes == 'Mayo 2021':
-    st.subheader("El cálculo corresponde a Junio 2021")
-elif año_mes == 'Junio 2021':
-    st.subheader("El cálculo corresponde a Julio 2021")
-elif año_mes == 'Julio 2021':
-    st.subheader("El cálculo corresponde a Agosto 2021")
-elif año_mes == 'Agosto 2021':
-    st.subheader("El cálculo corresponde a Septiembre 2021")
-elif año_mes == 'Septiembre 2021':
-    st.subheader("El cálculo corresponde a Octubre 2021")
-elif año_mes == 'Octubre 2021':
-    st.subheader("El cálculo corresponde a Noviembre 2021")
-elif año_mes == 'Noviembre 2021':
-    st.subheader("El cálculo corresponde a Diciembre 2021")
-elif año_mes == 'Diciembre 2021':
-    st.subheader("El cálculo corresponde a Enero 2022")
-elif año_mes == 'Enero 2022':
-    st.subheader("El cálculo corresponde a Febrero 2022")
-elif año_mes == 'Febrero 2022':
-    st.subheader("El cálculo corresponde a Marzo 2022")
-elif año_mes == 'Marzo 2022':
-    st.subheader("El cálculo corresponde a Abril 2022")
-elif año_mes == 'Abril 2022':
-    st.subheader("El cálculo corresponde a Mayo 2022")
-elif año_mes == 'Mayo 2022':
-    st.subheader("El cálculo corresponde a Junio 2022")
-elif año_mes == 'Junio 2022':
-    st.subheader("El cálculo corresponde a Julio 2022")
-elif año_mes == 'Julio 2022':
-    st.subheader("El cálculo corresponde a Agosto 2022")
-elif año_mes == 'Agosto 2022':
-    st.subheader("El cálculo corresponde a Septiembre 2022")
-elif año_mes == 'Septiembre 2022':
-    st.subheader("El cálculo corresponde a Octubre 2022")
-elif año_mes == 'Octubre 2022':
-    st.subheader("El cálculo corresponde a Noviembre 2022")
-elif año_mes == 'Noviembre 2022':
-    st.subheader("El cálculo corresponde a Diciembre 2022")
-elif año_mes == 'Diciembre 2022':
-    st.subheader("El cálculo corresponde a Enero 2023")
-elif año_mes == 'Enero 2023':
-    st.subheader("El cálculo corresponde a Febrero 2023")
-elif año_mes == 'Febrero 2023':
-    st.subheader("El cálculo corresponde a Marzo 2023")
-elif año_mes == 'Marzo 2023':
-    st.subheader("El cálculo corresponde a Abril 2023")
-elif año_mes == 'Abril 2023':
-    st.subheader("El cálculo corresponde a Mayo 2023")
-elif año_mes == 'Mayo 2023':
-    st.subheader("El cálculo corresponde a Junio 2023")
-elif año_mes == 'Junio 2023':
-    st.subheader("El cálculo corresponde a Julio 2023")
-elif año_mes == 'Julio 2023':
-    st.subheader("El cálculo corresponde a Agosto 2023")
-elif año_mes == 'Agosto 2023':
-    st.subheader("El cálculo corresponde a Septiembre 2023")
-elif año_mes == 'Septiembre 2023':
-    st.subheader("El cálculo corresponde a Octubre 2023")
-elif año_mes == 'Octubre 2023':
-    st.subheader("El cálculo corresponde a Noviembre 2023")
-elif año_mes == 'Noviembre 2023':
-    st.subheader("El cálculo corresponde a Diciembre 2023")
-else:
-    st.subheader("No se encuentran más meses")
-"""
 
 ############### Se organiza el app ##################
 
