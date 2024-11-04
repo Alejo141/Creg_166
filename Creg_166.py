@@ -289,20 +289,23 @@ with col3:
     st.caption("Disponibilidad:")
     st.code(disponibilidad)
 
-col1, col2 = st.columns(2)
-with col1:    
-    ######### Cálculo Co ###########
-    Co = Cm * disponibilidad
-    st.caption("Co:")
-    st.code(Co)
-
-with col2:
-    ######### Cálculo Gaom ###########
-    Gaom = Gm * disponibilidad
-    st.caption("Gaom:")
-    st.code(Gaom)
-
-######### Cálculo CU ###########
-CU = (Gm + Cm) * disponibilidad
-st.subheader("CU:")
-st.code(CU)
+if num_dias_prest > var_div:
+    st.subheader("Error, los días prestados no pueden ser mayor a los días del mes")
+else:
+    col1, col2 = st.columns(2)
+    with col1:    
+        ######### Cálculo Co ###########
+        Co = Cm * disponibilidad
+        st.caption("Co:")
+        st.code(Co)
+    
+    with col2:
+        ######### Cálculo Gaom ###########
+        Gaom = Gm * disponibilidad
+        st.caption("Gaom:")
+        st.code(Gaom)
+    
+    ######### Cálculo CU ###########
+    CU = (Gm + Cm) * disponibilidad
+    st.subheader("CU:")
+    st.code(CU)
