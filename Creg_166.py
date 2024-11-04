@@ -1,4 +1,5 @@
 ####################################### Versión Uno ##################################
+__version__ = "1.1"
 
 import streamlit as st
 import pandas as pd
