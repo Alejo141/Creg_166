@@ -8,9 +8,10 @@ import pip
 pip.main(["install", "openpyxl"])
 
 st.cache_data.clear()
+st.set_page_config(page_title="App CREG 166", layout="wide")
 
 ######### Título Pag ###########
-st.title("Cálculos CREG 166")
+st.title("App Cálculos CREG 166")
 
 ######### Constantes ###########
 
