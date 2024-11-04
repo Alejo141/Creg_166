@@ -92,7 +92,6 @@ with col1:
 with col2:
     mes = st.selectbox('Seleccione el periodo', ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'])
 
-
 año_mes = f"{mes}{" "}{año}"
 st.caption(año_mes)
 
@@ -243,6 +242,35 @@ with col1:
 
 with col2:
     ######### Cálculo Cm ###########
+    Cm = C0 * (IPCm_1/IPC0)
+    st.caption("Cm:")
+    st.code(Cm)
+
+col1, col2 = st.columns(2)
+
+
+############ Días del prestados en el periodo ##############
+num_dias_prest = st.number_input("Cuantos días presto en el mes:", min_value=0, max_value=31, value=0)
+st.caption("Días prestados:")
+st.code(num_dias_prest)
+
+if mes == "Enero":
+    var_div = 28
+elif mes == "Febrero" or "Abril" or "Junio" or "Julio" or "Septiembre" or "Noviembre" or "Diciembre":
+    var_div = 31
+elif mes == "Marzo" or "Mayo" or "Julio" or "Agosto" or "Octubre":
+    var_div = 30
+
+st.code(var_div)
+
+with col1:    
+    ######### Cálculo Co ###########
+    Co = G0 * (IPPm_1/IPP0)
+    st.caption("Gm:")
+    st.code(Gm)
+
+with col2:
+    ######### Cálculo Gaom ###########
     Cm = C0 * (IPCm_1/IPC0)
     st.caption("Cm:")
     st.code(Cm)
